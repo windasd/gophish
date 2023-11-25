@@ -9,12 +9,12 @@
         </div>
         <div class="row">
             <a href="/campaigns" class="btn btn-default">
-                <i class="fa fa-arrow-circle-o-left fa-lg"></i> Back
+                <i class="fa fa-arrow-circle-o-left fa-lg"></i> 回上一頁
             </a>
             <div class="btn-group">
                 <button type="button" id="exportButton" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="true">
-                    <i class="fa fa-file-excel-o"></i> Export CSV
+                    <i class="fa fa-file-excel-o"></i> 匯出 CSV
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="exportButton">
@@ -27,13 +27,13 @@
                 </ul>
             </div>
             <button id="complete_button" type="button" class="btn btn-blue" data-toggle="tooltip" onclick="completeCampaign()">
-                <i class="fa fa-flag-checkered"></i> Complete
+                <i class="fa fa-flag-checkered"></i> 完成演練
             </button>
             <button type="button" class="btn btn-danger" data-toggle="tooltip" onclick="deleteCampaign()">
-                <i class="fa fa-trash-o fa-lg"></i> Delete
+                <i class="fa fa-trash-o fa-lg"></i> 刪除
             </button>
             <button id="refresh_btn" type="button" class="btn btn-blue" data-toggle="tooltip" onclick="refresh()">
-                <i class="fa fa-refresh fa-lg"></i> Refresh
+                <i class="fa fa-refresh fa-lg"></i> 重整
             </button>
             <span id="refresh_message">
                 <i class="fa fa-spin fa-spinner"></i> Refreshing
@@ -71,11 +71,11 @@
                     <tr>
                         <th>Result ID</th>
                         <th class="no-sort"></th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Position</th>
-                        <th>Status</th>
+                        <th>名</th>
+                        <th>姓</th>
+                        <th>郵件</th>
+                        <th>職稱</th>
+                        <th>狀態</th>
                         <th class="text-center">Reported</th>
                     </tr>
                 </thead>

@@ -1,12 +1,12 @@
 {{define "body"}}
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h1 class="page-header">
-        Sending Profiles
+        郵件發送設定
     </h1>
     <div id="flashes" class="row"></div>
     <div class="row">
         <button type="button" class="btn btn-primary" onclick="edit(-1)" data-toggle="modal" data-backdrop="static"
-            data-target="#modal"><i class="fa fa-plus"></i> New Profile</button>
+            data-target="#modal"><i class="fa fa-plus"></i> 新增郵件發送設定</button>
     </div>
     &nbsp;
     <div id="loading">
@@ -21,9 +21,9 @@
         <table id="profileTable" class="table" style="display:none;">
             <thead>
                 <tr>
-                    <th class="col-md-4">Name</th>
-                    <th>Interface Type</th>
-                    <th>Last Modified Date</th>
+                    <th class="col-md-4">名稱</th>
+                    <th>協定類型</th>
+                    <th>最後修改時間</th>
                     <th class="col-md-2 no-sort"></th>
                 </tr>
             </thead>
@@ -40,25 +40,25 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="dismiss()"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="profileModalLabel">New Sending Profile</h4>
+                <h4 class="modal-title" id="profileModalLabel">新增郵件發送設定</h4>
             </div>
             <div class="modal-body">
                 <div class="row" id="modal.flashes"></div>
                 <form>
                     <div class="form-group">
-                        <label class="control-label" for="name">Name:</label>
+                        <label class="control-label" for="name">名稱:</label>
                         <input type="text" class="form-control" placeholder="Profile name" id="name" autofocus />
-                        <label class="control-label" for="interface_type">Interface Type:</label>
+                        <label class="control-label" for="interface_type">協定類型:</label>
                         <input type="text" class="form-control" value="SMTP" id="interface_type" disabled />
                         <label class="control-label" for="from">SMTP From: <i class="fa fa-question-circle"
                                 data-toggle="tooltip" data-placement="right" title="Set this to an email address from your sending domain to bypass SPF-checks. You can set the Envelope Sender in Email Templates. The Envelope Sender is shown to the user."></i></label>
-                        <input type="text" class="form-control" placeholder="test@example.com" id="from"
+                        <input type="text" class="form-control" placeholder="First Last <test@example.com>" id="from"
                             required />
-                        <label class="control-label" for="host">Host:</label>
+                        <label class="control-label" for="host">主機設定:</label>
                         <input type="text" class="form-control" placeholder="smtp.example.com:25" id="host" required />
-                        <label class="control-label" for="username">Username:</label>
+                        <label class="control-label" for="username">帳號:</label>
                         <input type="text" class="form-control" placeholder="Username" id="username" />
-                        <label class="control-label" for="password">Password:</label>
+                        <label class="control-label" for="password">密碼:</label>
                         <input type="password" class="form-control" placeholder="Password" id="password" />
                         <div class="checkbox checkbox-primary">
                             <input id="ignore_cert_errors" type="checkbox" checked>
@@ -91,12 +91,12 @@
                         </tbody>
                     </table>
                     <button type="button" data-toggle="modal" data-backdrop="static" data-target="#sendTestEmailModal"
-                        class="btn btn-primary"><i class="fa fa-envelope"></i> Send Test Email</button>
+                        class="btn btn-primary"><i class="fa fa-envelope"></i> 寄送測試信件</button>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" class="btn btn-default" onclick="dismiss()">Cancel</button>
-                <button type="button" class="btn btn-primary" id="modalSubmit">Save Profile</button>
+                <button type="button" data-dismiss="modal" class="btn btn-default" onclick="dismiss()">取消</button>
+                <button type="button" class="btn btn-primary" id="modalSubmit">存檔</button>
             </div>
         </div>
     </div>
@@ -108,7 +108,7 @@
             <!-- New Email Modal -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="sendTestEmailModalTitle">Send Test Email</h4>
+                <h4 class="modal-title" id="sendTestEmailModalTitle">寄送測試信件</h4>
             </div>
             <div class="modal-body">
                 <div class="row" id="sendTestEmailModal.flashes"></div>
@@ -132,9 +132,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button type="button" data-dismiss="modal" class="btn btn-default">取消</button>
                 <button type="button" class="btn btn-primary" id="sendTestModalSubmit" onclick="sendTestEmail()"><i
-                        class="fa fa-envelope"></i> Send</button>
+                        class="fa fa-envelope"></i> 寄送</button>
             </div>
         </div>
     </div>
